@@ -41,7 +41,7 @@ public class Model {
 
             }
             System.out.println("Hopefully we make it in the hole!: " + state.getName());
-            if(count%1000==0){
+            if(count%250==0){
                 System.out.println("RECALCULATING");
                 updateAllProbability();
             }
@@ -60,7 +60,7 @@ public class Model {
 
     public void learnModelFree(){
         int count = 1;
-        while(count <100) {
+        while(count <1000) {
             System.out.println("Episode: " + count);
             int score = 1;
             //Initialize S, Q(S,A) is already initialized to zero by creating the actions.
